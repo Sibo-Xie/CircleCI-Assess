@@ -39,5 +39,8 @@ func main() {
 	if port == "" {
 		port = "1337"
 	}
+
+	fmt.Println("target URL is [ localhost:", port, "/challenge ]")
+	
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
